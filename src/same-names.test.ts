@@ -10,8 +10,15 @@ test('invalid names', t => {
     t.deepEqual(getSameNames('name one', ['name', 'name one']), [{ name: 'name one', rating: 1 }]);
     t.deepEqual(getSameNames('name one', ['names one', 'name one']),
         [
-            { name: 'names one', rating: 0.875 },
+            { name: 'names one', rating: 0.88 },
             { name: 'name one', rating: 1 },
+        ]
+    );
+    t.deepEqual(getSameNames('Владимир Путин', ['Владимира Путина', 'Владимира Путине', 'Владимира Путиным', 'Putin']),
+        [
+            { name: 'Владимира Путина', rating: 0.87 },
+            { name: 'Владимира Путине', rating: 0.87 },
+            { name: 'Владимира Путиным', rating: 0.81 },
         ]
     );
 })

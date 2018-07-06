@@ -34,7 +34,7 @@ export function getSameNames(name: string, names: string[], options?: ISameNames
             if (rating > 0.5) {
                 sameNames.push({
                     name: oneName,
-                    rating,
+                    rating: parseFloat(rating.toFixed(2)),
                 });
                 break;
             }
