@@ -1,6 +1,6 @@
 {
   "name": "same-names",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Identifying same names",
   "main": "./lib/index.js",
   "types": "./types/index.d.ts",
