@@ -21,4 +21,6 @@ test('invalid names', t => {
             { name: 'Владимира Путиным', rating: 0.81 },
         ]
     );
+    const snames = getSameNames('R. Moldova', ['Republica Moldova', 'RISE Moldova']);
+    t.deepEqual(snames, []);
 })

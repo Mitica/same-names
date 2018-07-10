@@ -15,13 +15,17 @@ export class WordPrefixComparer extends NameComparer {
         const wordsCount = name1Words.length;
 
         for (let i = 0; i < wordsCount; i++) {
-            if (name1Words[i] === name2Words[i]) {
-                rating.addWordSameChars(name1Words[i].length, name1Words[i], name2Words[i], wordsCount, name1, name2);
+            const word1 = name1Words[i];
+            const word2 = name2Words[i];
+            if (word1 === word2) {
+                rating.addWordSameChars(name1Words[i].length, word1, word2, wordsCount, name1, name2);
                 continue;
             }
-            const sameChars = compareChars(name1Words[i], name2Words[i]);
+
+            const sameChars = compareChars(word1, word2);
+            const maxWordLength = Math.max(word1.length, word2.length);
             // !
-            if (sameChars < name1Words[i].length / 2) {
+            if (sameChars < 2 || sameChars < maxWordLength / 2) {
                 return 0;
             }
             rating.addWordSameChars(sameChars, name1Words[i], name2Words[i], wordsCount, name1, name2);
@@ -42,3 +46,7 @@ function compareChars(word1: string, word2: string): number {
     }
     return matchCount;
 }
+
+// function startWithUpper(word: string) {
+//     return word[0].toUpperCase() + word.substr(1).toLowerCase();
+// }
