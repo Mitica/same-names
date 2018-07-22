@@ -23,4 +23,11 @@ test('invalid names', t => {
     );
     const snames = getSameNames('R. Moldova', ['Republica Moldova', 'RISE Moldova']);
     t.deepEqual(snames, []);
+
+    t.deepEqual(getSameNames('Америка', ['Америку', 'Америкой', 'Американски']),
+        [{ "name": "Америку", "rating": 0.86 }, { "name": "Америкой", "rating": 0.75 }, { "name": "Американски", "rating": 0.64 }]);
 })
+
+test('Don`t allow numbers', t => {
+    t.deepEqual(getSameNames('name24', ['name22']), []);
+});

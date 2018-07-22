@@ -52,7 +52,13 @@ function sameWords(same: number, word1: string, word2: string) {
     }
     let rests = [word1.substr(same - 1), word2.substr(same - 1)];
     for (let rest of rests) {
-        if (rest && rest.toLowerCase() !== rest) {
+        if (!rest) {
+            continue;
+        }
+        if (rest.toLowerCase() !== rest) {
+            return false;
+        }
+        if (/^\d/.test(rest)) {
             return false;
         }
     }
