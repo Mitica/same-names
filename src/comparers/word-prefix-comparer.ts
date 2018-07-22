@@ -58,7 +58,7 @@ function sameWords(same: number, word1: string, word2: string) {
         if (rest.toLowerCase() !== rest) {
             return false;
         }
-        if (/^\d/.test(rest)) {
+        if (/\d/.test(rest)) {
             return false;
         }
     }
