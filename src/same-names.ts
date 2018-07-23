@@ -23,6 +23,7 @@ export function getSameNames(name: string, names: string[], options?: ISameNames
     }
 
     options = { ...DEFAULT_OPTIONS, ...options };
+    const lang = options.lang;
 
     const comparers = getComparers(options);
 
@@ -30,7 +31,7 @@ export function getSameNames(name: string, names: string[], options?: ISameNames
 
     for (let oneName of names) {
         for (let comparer of comparers) {
-            const rating = comparer.compare(name, oneName);
+            const rating = comparer.compare(name, oneName, lang);
             if (rating > 0.5) {
                 sameNames.push({
                     name: oneName,

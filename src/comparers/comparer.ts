@@ -1,8 +1,8 @@
 
 export interface INameComparer {
-    compare(name1: string, name2: string): number
+    compare(name1: string, name2: string, lang?: string): number
 }
 
 export abstract class NameComparer implements INameComparer {
-    abstract compare(name1: string, name2: string): number
+    abstract compare(name1: string, name2: string, lang?: string): number
 }

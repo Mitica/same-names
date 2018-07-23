@@ -1,0 +1,87 @@
+{
+    "ro": [
+        "'s",
+        "`s",
+        {
+            "value": "-ului",
+            "example": "Site-ului"
+        },
+        {
+            "value": "-lui",
+            "example": "?Nume-lui"
+        },
+        {
+            "value": "ui",
+            "example": "Partidului"
+        },
+        {
+            "value": "a",
+            "example": "Comisia"
+        },
+        {
+            "value": "ă",
+            "example": "Europeană"
+        },
+        {
+            "value": "ei",
+            "example": "Comisiei"
+        },
+        {
+            "value": "e",
+            "example": "Europene"
+        },
+        {
+            "value": "ne",
+            "example": "Europene"
+        },
+        {
+            "value": "ii",
+            "example": "Uniunii"
+        },
+        {
+            "value": "ea",
+            "example": "Uniunea"
+        }
+    ],
+    "ru": [
+        "'s",
+        "`s",
+        "йские",
+        "йском",
+        "йской",
+        "йский",
+        "йская",
+        "йскую",
+        "йских",
+        "ские",
+        "ском",
+        "ской",
+        "ский",
+        "ская",
+        "скую",
+        "ских",
+        {
+            "value": "ем",
+            "example": "Алексеем"
+        },
+        {
+            "value": "ий",
+            "example": "Нижний"
+        },
+        "его",
+        "ого",
+        "ым",
+        "ом",
+        "ой",
+        "ая",
+        "ый",
+        "а",
+        "у",
+        "е",
+        "я",
+        "и",
+        "й",
+        "ю",
+        "ы"
+    ]
+}
